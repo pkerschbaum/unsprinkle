@@ -52,11 +52,18 @@ const Image = styled.img`
 
 const Tags = styled.ul`
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
 `;
 
 const Tag = styled.li`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+  &:last-of-type {
+    flex-shrink: 1;
+  }
+
   padding: 4px 8px;
   background: var(--color-gray-300);
   font-size: 0.875rem;
